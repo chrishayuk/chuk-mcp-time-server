@@ -1,0 +1,8 @@
+[project]
+name = "chuk-mcp-time-server"
+description = "MCP Time Server"
+version = "0.1.2"
+python = "3.11"
+
+[run]
+script = "chuk_mcp_time_server.main:main"
