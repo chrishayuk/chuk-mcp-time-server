@@ -1,8 +1,7 @@
-# chuk_mcp_time_server/models.py
 from pydantic import BaseModel, Field
 from enum import Enum
 
-# Enum for tool names (optional)
+# Optional: Enum for tool names (can be used for reference)
 class TimeTools(str, Enum):
     GET_CURRENT_TIME = "get_current_time"
     CONVERT_TIME = "convert_time"

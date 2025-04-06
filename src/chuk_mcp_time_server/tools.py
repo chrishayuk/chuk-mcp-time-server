@@ -1,13 +1,12 @@
-# chuk_mcp_time_server/tools.py
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 from pydantic import ValidationError
-from mcp.shared.exceptions import McpError
+from mcp.shared.exceptions import McpError  # Adjust if needed for your project
 
-# imports
-from chuk_mcp_time_server.common.mcp_tool_decorator import mcp_tool
+# Import the runtime's tool decorator
+from chuk_mcp_runtime.common.mcp_tool_decorator import mcp_tool
 
-# Import our models - use relative import for better modularity
+# Import our models using absolute imports
 from chuk_mcp_time_server.models import (
     GetCurrentTimeInput,
     TimeResult,
@@ -27,22 +26,17 @@ def get_current_time(timezone: str) -> dict:
         raise ValueError(f"Invalid input for get_current_time: {e}")
 
     try:
-        # Get the timezone
         tz = ZoneInfo(validated_input.timezone)
     except Exception as e:
         raise McpError(f"Invalid timezone '{validated_input.timezone}': {e}")
     
-    # Get the time
     now = datetime.now(tz)
 
-    # Build the result
     result = TimeResult(
         timezone=validated_input.timezone,
         datetime=now.isoformat(timespec="seconds"),
         is_dst=bool(now.dst())
     )
-
-    # Return the result
     return result.model_dump()
 
 @mcp_tool(name="convert_time", description="Convert time between timezones")
