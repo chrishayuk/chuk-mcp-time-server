@@ -6,12 +6,10 @@ host:
 server:
   type: "stdio"  # Options: stdio, websocket
 
-logging:
-  level: "INFO"
-  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-  reset_handlers: true
-  quiet_libraries: true
-
-tools:
-  registry_module: "chuk_mcp_runtime.common.mcp_tool_decorator"
-  registry_attr: "TOOLS_REGISTRY"
+mcp_servers:
+  time_server:
+    enabled: true
+    location: "."
+    tools:
+      enabled: true
+      module: "chuk_mcp_time_server.tools"
