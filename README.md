@@ -1,5 +1,7 @@
 # MCP Time Server
 
+[![smithery badge](https://smithery.ai/badge/@chrishayuk/chuk-mcp-time-server)](https://smithery.ai/server/@chrishayuk/chuk-mcp-time-server)
+
 ## Overview
 
 The MCP Time Server is a sophisticated Python-based microservice designed to provide advanced time-related utilities across different timezones. It offers robust functionality for retrieving current times and converting times between various global timezones.
@@ -29,6 +31,14 @@ Development dependencies:
 - pytest (>=8.3.5)
 
 ## Installation
+
+### Installing via Smithery
+
+To install MCP Time Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@chrishayuk/chuk-mcp-time-server):
+
+```bash
+npx -y @smithery/cli install @chrishayuk/chuk-mcp-time-server --client claude
+```
 
 ### Prerequisites
 
