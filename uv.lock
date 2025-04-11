@@ -35,7 +35,7 @@ wheels = [
 
 [[package]]
 name = "chuk-mcp-runtime"
-version = "0.1.5"
+version = "0.1.6"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "mcp" },
@@ -43,12 +43,12 @@ dependencies = [
     { name = "pyyaml" },
 ]
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/91/8b/6d17f03550a8b4de5616d9fd676e34b4cdfe9491c428d32ebe06072268de/chuk_mcp_runtime-0.1.5-py3-none-any.whl", hash = "sha256:e73a75c4a857da90b44206f6c98f7e5c05b68536d333b8f6e5a2e3651b5d2546", size = 16033 },
+    { url = "https://files.pythonhosted.org/packages/3e/37/8cf8369e26644985932045209e48fbf3f9887125658e16d1e05b6dfa60f5/chuk_mcp_runtime-0.1.6-py3-none-any.whl", hash = "sha256:c7141dab5966036377ed5b583b80b04d4e82fb44a51cc7d992929def3bd08a79", size = 16024 },
 ]
 
 [[package]]
 name = "chuk-mcp-time-server"
-version = "0.1.8"
+version = "0.1.9"
 source = { editable = "." }
 dependencies = [
     { name = "chuk-mcp-runtime" },
@@ -65,7 +65,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "chuk-mcp-runtime", specifier = ">=0.1.5" },
+    { name = "chuk-mcp-runtime", specifier = ">=0.1.6" },
     { name = "mcp", specifier = ">=1.6.0" },
     { name = "pydantic", specifier = ">=2.11.2" },
     { name = "pyyaml", specifier = ">=6.0.2" },
