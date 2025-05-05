@@ -35,15 +35,17 @@ wheels = [
 
 [[package]]
 name = "chuk-mcp-runtime"
-version = "0.1.7"
+version = "0.1.13"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "mcp" },
     { name = "pydantic" },
     { name = "pyyaml" },
+    { name = "starlette" },
+    { name = "uvicorn" },
 ]
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/77/71/0dcfbb8f6ae2a3bb02bd97df0506b74709c563f660d720d95870e41be81a/chuk_mcp_runtime-0.1.7-py3-none-any.whl", hash = "sha256:24c4bd0bda193e7d476395f3bf8ee024dc77fab2be59a1a8512d59c83d55bb1b", size = 16056 },
+    { url = "https://files.pythonhosted.org/packages/dd/b5/11949dfd880e70bc8e07765eeed3b97d8ccf14677be3f4f1bdf8eb401ba8/chuk_mcp_runtime-0.1.13-py3-none-any.whl", hash = "sha256:540d23a4efaa892bc7fb15c6d2bbdb89c77d4d672cc9dc2e5503f9d91bfec7df", size = 18804 },
 ]
 
 [[package]]
@@ -65,7 +67,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "chuk-mcp-runtime", specifier = ">=0.1.7" },
+    { name = "chuk-mcp-runtime", specifier = ">=0.1.13" },
     { name = "mcp", specifier = ">=1.6.0" },
     { name = "pydantic", specifier = ">=2.11.2" },
     { name = "pyyaml", specifier = ">=6.0.2" },
