@@ -39,7 +39,7 @@ Development dependencies:
 ### Install from PyPI
 
 ```bash
-pip install chuk-mcp-time-server
+pip install chuk-mcp-artifact-server
 ```
 
 ### Install from Source
@@ -47,7 +47,7 @@ pip install chuk-mcp-time-server
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd chuk-mcp-time-server
+cd chuk-mcp-artifact-server
 ```
 
 2. Create a virtual environment:
@@ -73,13 +73,13 @@ pip install .[dev]  # Installs package with development dependencies
 ### Command-Line Interface
 
 ```bash
-chuk-mcp-time-server
+chuk-mcp-artifact-server
 ```
 
 ### Programmatic Usage
 
 ```python
-from chuk_mcp_time_server.main import main
+from chuk_mcp_artifact_server.main import main
 
 if __name__ == "__main__":
     main()

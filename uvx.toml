@@ -1,8 +1,8 @@
 [project]
-name = "chuk-mcp-time-server"
+name = "chuk-mcp-artifact-server"
 description = "MCP Time Server"
 version = "0.1.2"
 python = "3.11"
 
 [run]
-script = "chuk_mcp_time_server.main:main"
+script = "chuk_mcp_artifact_server.main:main"

@@ -3,13 +3,13 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "chuk-mcp-time-server"
+name = "chuk-mcp-artifact-server"
 version = "0.1.11"
 description = "MCP Time Server"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "chuk-mcp-runtime>=0.1.13",
+    "chuk-mcp-runtime>=0.1.35",
     "mcp>=1.6.0",
     "pydantic>=2.11.2",
     "pyyaml>=6.0.2",
@@ -17,8 +17,8 @@ dependencies = [
 ]
 
 [project.scripts]
-chuk-mcp-time-server = "chuk_mcp_time_server.main:main"
-mcp-time-server = "chuk_mcp_time_server.main:main"
+chuk-mcp-artifact-server = "chuk_mcp_artifact_server.main:main"
+mcp-artifact-server = "chuk_mcp_artifact_server.main:main"
 
 [dependency-groups]
 dev = [
@@ -30,7 +30,7 @@ package-dir = { "" = "src" }
 
 [tool.setuptools.packages.find]
 where = ["src"]  # Change from "." to "src"
-include = ["chuk_mcp_time_server*"]
+include = ["chuk_mcp_artifact_server*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

@@ -1,3 +1,4 @@
+# chuk_mcp_artifact_server/models.py
 from pydantic import BaseModel, Field
 from enum import Enum
 

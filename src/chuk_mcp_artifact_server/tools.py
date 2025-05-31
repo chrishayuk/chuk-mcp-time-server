@@ -1,3 +1,4 @@
+# chuk_mcp_artifact_server/tools.py
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 from pydantic import ValidationError
@@ -7,7 +8,7 @@ from mcp.shared.exceptions import McpError  # Adjust if needed for your project
 from chuk_mcp_runtime.common.mcp_tool_decorator import mcp_tool
 
 # Import our models using absolute imports
-from chuk_mcp_time_server.models import (
+from chuk_mcp_artifact_server.models import (
     GetCurrentTimeInput,
     TimeResult,
     ConvertTimeInput,
@@ -15,7 +16,7 @@ from chuk_mcp_time_server.models import (
 )
 
 @mcp_tool(name="get_current_time", description="Get current time in a specified timezone")
-def get_current_time(timezone: str) -> dict:
+async def get_current_time(timezone: str) -> dict:
     """
     Validate input using GetCurrentTimeInput, compute current time in the provided timezone,
     and return the result as defined by TimeResult.
@@ -40,7 +41,7 @@ def get_current_time(timezone: str) -> dict:
     return result.model_dump()
 
 @mcp_tool(name="convert_time", description="Convert time between timezones")
-def convert_time(source_timezone: str, time: str, target_timezone: str) -> dict:
+async def convert_time(source_timezone: str, time: str, target_timezone: str) -> dict:
     """
     Validate input using ConvertTimeInput, convert the time from source timezone to target timezone,
     and return the result as defined by TimeConversionResult.

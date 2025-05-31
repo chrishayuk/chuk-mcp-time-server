@@ -6,10 +6,10 @@ include README.md
 include LICENSE.md
 
 # Include package files
-recursive-include src/chuk_mcp_time_server *.py
+recursive-include src/chuk_mcp_artifact_server *.py
 
 # Include any resources the echo server might need
-recursive-include src/chuk_mcp_time_server/resources *.json *.txt
+recursive-include src/chuk_mcp_artifact_server/resources *.json *.txt
 
 # Exclude development and temporary files
 global-exclude *.py[cod]
