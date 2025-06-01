@@ -5,15 +5,15 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "chuk-mcp-artifact-server"
 version = "0.1.11"
-description = "MCP Time Server"
+description = "CHUK MCP Artifact Server"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "chuk-mcp-runtime>=0.1.35",
+    "chuk-artifacts>=0.1.2",
+    "chuk-mcp-runtime>=0.1.36",
     "mcp>=1.6.0",
     "pydantic>=2.11.2",
-    "pyyaml>=6.0.2",
-    "pyz>=0.4.3",
+    "pyyaml>=6.0.2"
 ]
 
 [project.scripts]
@@ -22,6 +22,7 @@ mcp-artifact-server = "chuk_mcp_artifact_server.main:main"
 
 [dependency-groups]
 dev = [
+    "pytest-asyncio>=1.0.0",
     "pytest>=8.3.5",
 ]
 

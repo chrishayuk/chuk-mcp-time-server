@@ -11,7 +11,7 @@ clean:
 # Run the server launcher.
 run:
 	@echo "Running server..."
-	PYTHONPATH=src uv run mcp-time-server
+	PYTHONPATH=src uv run chuk-mcp-artifact-server
 
 # Build the project using the pyproject.toml configuration.
 build:

@@ -317,7 +317,7 @@ wheels = [
 
 [[package]]
 name = "chuk-artifacts"
-version = "0.1.0"
+version = "0.1.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "aioboto3" },
@@ -329,7 +329,7 @@ dependencies = [
     { name = "redis" },
 ]
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/3d/6b/c55b79bf72f98e8b1673e674619efc2d060c1caef9c16355f3b151d99152/chuk_artifacts-0.1.0-py3-none-any.whl", hash = "sha256:d037dc2607c522d88d50ac07600d385c4ce0c1b6826fadef1ded17b9c2a089d6", size = 37533 },
+    { url = "https://files.pythonhosted.org/packages/06/1c/a7a77e2b770077b5599d8ed27aa9f21357ba43422090fe2af1478c17577f/chuk_artifacts-0.1.2-py3-none-any.whl", hash = "sha256:2905c25524de6844d885d8e00615923059ab427353fa92c46e7975519ff4a37e", size = 43412 },
 ]
 
 [[package]]
@@ -351,49 +351,50 @@ name = "chuk-mcp-artifact-server"
 version = "0.1.11"
 source = { editable = "." }
 dependencies = [
+    { name = "chuk-artifacts" },
     { name = "chuk-mcp-runtime" },
     { name = "mcp" },
     { name = "pydantic" },
     { name = "pyyaml" },
-    { name = "pyz" },
 ]
 
 [package.dev-dependencies]
 dev = [
     { name = "pytest" },
+    { name = "pytest-asyncio" },
 ]
 
 [package.metadata]
 requires-dist = [
-    { name = "chuk-mcp-runtime", specifier = ">=0.1.35" },
+    { name = "chuk-artifacts", specifier = ">=0.1.2" },
+    { name = "chuk-mcp-runtime", specifier = ">=0.1.36" },
     { name = "mcp", specifier = ">=1.6.0" },
     { name = "pydantic", specifier = ">=2.11.2" },
     { name = "pyyaml", specifier = ">=6.0.2" },
-    { name = "pyz", specifier = ">=0.4.3" },
 ]
 
 [package.metadata.requires-dev]
-dev = [{ name = "pytest", specifier = ">=8.3.5" }]
+dev = [
+    { name = "pytest", specifier = ">=8.3.5" },
+    { name = "pytest-asyncio", specifier = ">=1.0.0" },
+]
 
 [[package]]
 name = "chuk-mcp-runtime"
-version = "0.1.35"
+version = "0.1.36"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "aioboto3" },
     { name = "chuk-artifacts" },
     { name = "chuk-sessions" },
     { name = "chuk-tool-processor" },
     { name = "cryptography" },
-    { name = "ibm-cos-sdk" },
     { name = "mcp" },
     { name = "pydantic" },
     { name = "pyjwt" },
     { name = "pyyaml" },
-    { name = "redis" },
 ]
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/a0/cc/3ce48431a1439f7a24a4b0933d9b9351219f88d30c9bf277773002e2b7a3/chuk_mcp_runtime-0.1.35-py3-none-any.whl", hash = "sha256:e50cac90f8d7035bda738f7c639894cfb9b7c876c33d71d7b97c96d59ae393a5", size = 42427 },
+    { url = "https://files.pythonhosted.org/packages/4e/89/84d4de00ce4beddb1209e7da5e6df7a8c5704829a40d85c051b8ad157ce7/chuk_mcp_runtime-0.1.36-py3-none-any.whl", hash = "sha256:fa7455a3e543b85e9b56fddef9962d89775abae070e8c4122bc399abe84a3f88", size = 45662 },
 ]
 
 [[package]]
@@ -1081,6 +1082,18 @@ wheels = [
 ]
 
 [[package]]
+name = "pytest-asyncio"
+version = "1.0.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pytest" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/d0/d4/14f53324cb1a6381bef29d698987625d80052bb33932d8e7cbf9b337b17c/pytest_asyncio-1.0.0.tar.gz", hash = "sha256:d15463d13f4456e1ead2594520216b225a16f781e144f8fdf6c5bb4667c48b3f", size = 46960 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/30/05/ce271016e351fddc8399e546f6e23761967ee09c8c568bbfbecb0c150171/pytest_asyncio-1.0.0-py3-none-any.whl", hash = "sha256:4f024da9f1ef945e680dc68610b52550e36590a67fd31bb3b4943979a1f90ef3", size = 15976 },
+]
+
+[[package]]
 name = "python-dateutil"
 version = "2.9.0.post0"
 source = { registry = "https://pypi.org/simple" }
@@ -1135,12 +1148,6 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/14/0d/e2c3b43bbce3cf6bd97c840b46088a3031085179e596d4929729d8d68270/PyYAML-6.0.2-cp313-cp313-win32.whl", hash = "sha256:bc2fa7c6b47d6bc618dd7fb02ef6fdedb1090ec036abab80d4681424b84c1183", size = 140527 },
     { url = "https://files.pythonhosted.org/packages/fa/de/02b54f42487e3d3c6efb3f89428677074ca7bf43aae402517bc7cca949f3/PyYAML-6.0.2-cp313-cp313-win_amd64.whl", hash = "sha256:8388ee1976c416731879ac16da0aff3f63b286ffdd57cdeb95f3f2e085687563", size = 156446 },
 ]
-
-[[package]]
-name = "pyz"
-version = "0.4.3"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/44/03/9d567395d2c900b6d07cd117b25fc0acadeb169a64ae6535771f33906854/pyz-0.4.3.tar.gz", hash = "sha256:edbf8459d5ab11ea32752cbd49fda75cab00181a3dee965372e20d94d2230c63", size = 4655 }
 
 [[package]]
 name = "redis"
